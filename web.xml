@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>FinalTest</display-name>
+  <welcome-file-list>
+
+    <welcome-file>index.jsp</welcome-file>
+
+  </welcome-file-list>
+  
+<listener>
+<listener-class>backend.servletListener</listener-class>
+</listener>
+  
+    <servlet>
+  	<servlet-name>filter</servlet-name>
+  	<servlet-class>backend.tweetFilter</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>filter</servlet-name>
+  	<url-pattern>/filter</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>test</servlet-name>
+  	<servlet-class>backend.Requesthandler</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>test</servlet-name>
+  	<url-pattern>/run</url-pattern>
+  </servlet-mapping>
+  
+ </web-app>
